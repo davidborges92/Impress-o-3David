@@ -60,7 +60,7 @@ body {
   text-decoration: none;
 }
 
-.navegacao ul {
+.navegacao ul.menu {
   display: flex;
   list-style: none;
   gap: 2rem;
@@ -368,7 +368,7 @@ h2 {
   margin-top: 1rem;
 }
 
-/* Responsividade */
+/* Responsividade / Menu Mobile */
 @media (max-width: 768px) {
   .menu-mobile-btn {
     display: block;
@@ -379,6 +379,7 @@ h2 {
   }
 
   .menu {
+    display: none !important; /* Escondido por padrão no celular */
     position: absolute;
     top: calc(100% + 1rem);
     left: -20px;
@@ -387,7 +388,6 @@ h2 {
     flex-direction: column;
     padding: 1.5rem;
     gap: 1.2rem;
-    display: none;
     border-bottom: 1px solid var(--borda);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     z-index: 1000;
@@ -395,7 +395,7 @@ h2 {
   }
 
   .menu.aberto {
-    display: flex;
+    display: flex !important; /* Aparece apenas quando o JS adiciona a classe aberto */
   }
 
   h1 {
@@ -425,14 +425,3 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
-```[cite: 1]
-
----
-
-### Como atualizar no GitHub:
-1. Vá até o seu repositório no [GitHub](https://github.com/davidborges92/Impress-o-3David), abra a pasta **`css`** e clique no arquivo **`styles.css`**[cite: 1].
-2. Clique no ícone do **lápis** (*Edit this file*) no canto superior direito[cite: 1].
-3. Apague todo o conteúdo antigo e cole este novo código CSS no lugar[cite: 1].
-4. Role até o final da página e clique no botão verde **[Commit changes]**[cite: 1].
-
-O [Netlify](https://www.netlify.com/) vai atualizar o seu site [impressao3david.netlify.app](https://impressao3david.netlify.app/) automaticamente em poucos segundos, resolvendo o visual do menu no celular e organizando os produtos em duas colunas no computador!
