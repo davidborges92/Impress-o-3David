@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressão 3David — Sua Imaginação em 3D</title>
+    <meta name="description" content="Funko personalizado e figuras colecionáveis geek feitos em impressão 3D, sob encomenda. Transforme pessoas e personagens em peças únicas!">
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="Impressão 3David" height="40">
+                <span>Impressão 3David</span>
+            </a>
+            
+            <nav class="navegacao">
+                <button class="menu-mobile-btn" aria-label="Abrir menu">☰</button>
+                <ul class="menu">
+                    <li><a href="#início">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#como-funciona">Como Funciona</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li>
+                        <button class="carrinho-btn" id="carrinhoBtn">
+                            🛒 <span id="carrinhoContador">0</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="início" class="seção herói">
+            <div class="container">
+                <h1>Sua imaginação em <span>3D</span></h1>
+                <p class="subtitulo">Transformamos pessoas, personagens e ideias em peças 3D únicas. Do boneco personalizado que representa sua história aos colecionáveis do universo geek, cada criação ganha vida em três dimensões.</p>
+                <p class="destaque">🛠️ Tudo produzido sob encomenda — feito especialmente para você!</p>
+                <a href="#produtos" class="btn primário">Ver Produtos</a>
+            </div>
+        </section>
+
+        <section id="produtos" class="seção produtos">
+            <div class="container">
+                <h2>Nossos Produtos</h2>
+                
+                <div class="filtros">
+                    <button class="filtro-btn ativo" data-categoria="todos">Todos</button>
+                    <button class="filtro-btn" data-categoria="Personalizados">Personalizados</button>
+                    <button class="filtro-btn" data-categoria="Geek & Anime">Geek & Anime</button>
+                </div>
+
+                <div class="grade-produtos" id="gradeProdutos">
+                    <!-- Produtos carregados pelo js/config.js -->
+                </div>
+            </div>
+        </section>
+
+        <section id="como-funciona" class="seção como-funciona">
+            <div class="container">
+                <h2>Como Funciona</h2>
+                <div class="passos">
+                    <div class="passo">
+                        <span class="número">1</span>
+                        <h3>Escolha seu produto</h3>
+                        <p>Navegue pelas opções e veja o que deseja criar</p>
+                    </div>
+                    <div class="passo">
+                        <span class="número">2</span>
+                        <h3>Entre em contato</h3>
+                        <p>Clique em "Pedir pelo WhatsApp" e nos envie os detalhes: foto, personagem, tamanho e observações</p>
+                    </div>
+                    <div class="passo">
+                        <span class="número">3</span>
+                        <h3>Receba o orçamento</h3>
+                        <p>Informamos o valor e o prazo de produção do seu pedido</p>
+                    </div>
+                    <div class="passo">
+                        <span class="número">4</span>
+                        <h3>Confirme e pague</h3>
+                        <p>Enviamos o link de pagamento seguro pela InfinitePay</p>
+                    </div>
+                    <div class="passo">
+                        <span class="número">5</span>
+                        <h3>Produzimos e enviamos 🎉</h3>
+                        <p>Sua peça é feita com cuidado e enviada para você!</p>
+                    </div>
+                </div>
+                
+                <div class="aviso-legal">
+                    <p><strong>ℹ️ Informações importantes:</strong> As figuras inspiradas em personagens são criações artísticas e interpretativas, não produtos oficiais. Os nomes e marcas mencionados pertencem aos seus respectivos criadores. Sempre verifique a disponibilidade antes de fazer seu pedido.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="seção contato">
+            <div class="container">
+                <h2>Fale Conosco</h2>
+                <p>Tem alguma dúvida ou quer criar algo especial? Entre em contato!</p>
+                <div class="canais-contato">
+                    <a href="https://wa.me/5561981873740" target="_blank" class="btn secundário grande">
+                        💬 WhatsApp — (61) 98187-3740
+                    </a>
+                    <a href="https://www.instagram.com/impressao3david/" target="_blank" class="btn secundário">
+                        📷 Instagram — @impressao3david
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal do Carrinho -->
+    <div class="modal-carrinho" id="modalCarrinho">
+        <div class="conteudo-modal">
+            <button class="fechar-modal" id="fecharModal">&times;</button>
+            <h2>Seu Pedido</h2>
+            <div id="itensCarrinho" class="itens-carrinho"></div>
+            <div class="resumo-carrinho">
+                <p id="carrinhoVazio" class="vazio">Seu carrinho está vazio</p>
+                <button id="enviarWhatsApp" class="btn primário completo" disabled>Enviar pelo WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="rodapé">
+        <div class="container">
+            <p><strong>Impressão 3David</strong> — Sua imaginação em 3D</p>
+            <p>Peças produzidas sob encomenda • Feito com ❤️ em Brasília-DF</p>
+            <p class="aviso-pequeno">As figuras inspiradas em personagens são criações artísticas, não produtos oficiais.</p>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
