@@ -34,7 +34,7 @@ body {
   margin: 0 auto;
 }
 
-/* Cabeçalho Centralizado (Logo em cima, Menu embaixo) */
+/* Cabeçalho Centralizado (Logo em cima, Menu embaixo sempre visível) */
 .cabecalho {
   background: rgba(26, 26, 46, 0.95);
   border-bottom: 1px solid var(--borda);
@@ -49,7 +49,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  position: relative;
 }
 
 .logo {
@@ -90,17 +89,9 @@ body {
   color: var(--verde-neon);
 }
 
+/* Removido o botão hambúrguer para não aparecer mais */
 .menu-mobile-btn {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--texto);
-  font-size: 1.8rem;
-  cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  display: none !important;
 }
 
 /* Seções */
@@ -386,41 +377,20 @@ h2 {
   margin-top: 1rem;
 }
 
-/* Responsividade / Menu Mobile */
+/* Responsividade */
 @media (max-width: 768px) {
-  .cabecalho .container {
-    align-items: center;
-  }
-
-  .menu-mobile-btn {
-    display: block;
-  }
-
-  .menu {
-    display: none !important;
-    width: 100%;
-    background: var(--fundo-card);
-    flex-direction: column;
-    padding: 1.2rem;
-    gap: 1rem;
-    border-top: 1px solid var(--borda);
-    border-bottom: 1px solid var(--borda);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-
-  .menu.aberto {
-    display: flex !important;
-  }
-
   h1 {
     font-size: 2rem;
   }
 
   h2 {
     font-size: 1.5rem;
+  }
+
+  /* Garante que o menu no celular fique visível e organizado lado a lado embaixo da logo */
+  .navegacao ul.menu {
+    gap: 1rem;
+    font-size: 0.9rem;
   }
 
   /* Filtros de categoria lado a lado no celular */
