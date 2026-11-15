@@ -86,27 +86,12 @@ body {
   cursor: pointer;
 }
 
-.carrinho-btn {
-  background: linear-gradient(135deg, var(--roxo), var(--verde-neon));
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  color: white;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: transform 0.2s;
-}
-
-.carrinho-btn:hover {
-  transform: scale(1.05);
-}
-
 /* Seções */
 .seção {
   padding: 4rem 0;
 }
 
-.heroí {
+.herói {
   text-align: center;
   padding: 5rem 0;
 }
@@ -219,11 +204,13 @@ h2 {
   background: rgba(0, 250, 154, 0.05);
 }
 
-/* Grade de Produtos */
+/* Grade de Produtos - Configurada para 2 colunas no computador */
 .grade-produtos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .card-produto {
@@ -242,13 +229,13 @@ h2 {
 
 .img-produto {
   width: 100%;
-  height: 200px;
+  height: 240px;
   object-fit: cover;
   background: #252540;
 }
 
 .conteudo-card {
-  padding: 1.25rem;
+  padding: 1.5rem;
 }
 
 .categoria {
@@ -262,26 +249,26 @@ h2 {
 }
 
 .card-produto h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: var(--verde-neon);
 }
 
 .descricao {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--texto-claro);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .info-producao {
   font-size: 0.85rem;
   color: #888;
   font-style: italic;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .preco {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: var(--verde-claro);
   margin-bottom: 1rem;
@@ -361,94 +348,6 @@ h2 {
   margin: 0 auto;
 }
 
-/* Modal do Carrinho */
-.modal-carrinho {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 200;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-}
-
-.modal-carrinho.aberto {
-  opacity: 1;
-  visibility: visible;
-}
-
-.conteudo-modal {
-  background: var(--fundo-card);
-  border-radius: 12px;
-  width: 90%;
-  max-width: 450px;
-  max-height: 80vh;
-  overflow-y: auto;
-  padding: 2rem;
-  border: 1px solid var(--borda);
-  position: relative;
-}
-
-.fechar-modal {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--texto-claro);
-  cursor: pointer;
-}
-
-.conteudo-modal h2 {
-  text-align: left;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-}
-
-.itens-carrinho {
-  margin-bottom: 1.5rem;
-}
-
-.item-carrinho {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--borda);
-}
-
-.item-carrinho h4 {
-  font-size: 0.95rem;
-  margin-bottom: 0.25rem;
-}
-
-.item-carrinho p {
-  font-size: 0.85rem;
-  color: var(--texto-claro);
-}
-
-.remover-item {
-  background: none;
-  border: none;
-  color: #e74c3c;
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
-}
-
-.vazio {
-  text-align: center;
-  color: var(--texto-claro);
-  padding: 2rem;
-}
-
 /* Rodapé */
 .rodapé {
   background: var(--fundo-card);
@@ -475,17 +374,24 @@ h2 {
     display: block;
   }
 
+  .navegacao {
+    position: relative;
+  }
+
   .menu {
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    top: calc(100% + 1rem);
+    left: -20px;
+    right: -20px;
     background: var(--fundo-card);
     flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
+    padding: 1.5rem;
+    gap: 1.2rem;
     display: none;
     border-bottom: 1px solid var(--borda);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    text-align: center;
   }
 
   .menu.aberto {
@@ -500,8 +406,13 @@ h2 {
     font-size: 1.5rem;
   }
 
+  .grade-produtos {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
   .passos {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -514,3 +425,14 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+```[cite: 1]
+
+---
+
+### Como atualizar no GitHub:
+1. Vá até o seu repositório no [GitHub](https://github.com/davidborges92/Impress-o-3David), abra a pasta **`css`** e clique no arquivo **`styles.css`**[cite: 1].
+2. Clique no ícone do **lápis** (*Edit this file*) no canto superior direito[cite: 1].
+3. Apague todo o conteúdo antigo e cole este novo código CSS no lugar[cite: 1].
+4. Role até o final da página e clique no botão verde **[Commit changes]**[cite: 1].
+
+O [Netlify](https://www.netlify.com/) vai atualizar o seu site [impressao3david.netlify.app](https://impressao3david.netlify.app/) automaticamente em poucos segundos, resolvendo o visual do menu no celular e organizando os produtos em duas colunas no computador!
