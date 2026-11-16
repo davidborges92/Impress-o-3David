@@ -8,7 +8,7 @@ const CONFIG = {
   whatsappNumber: "5561981873740", // DDI + DDD + número, só números
   
   // Loja
-  storeName: "Impressão 3David",
+  storeName: "Impressão3David",
   currency: "BRL",
   currencySymbol: "R$"
 };
@@ -35,8 +35,8 @@ const STORE_PRODUCTS = [
   },
   {
     id: 2,
-    name: "Figuras — Pokémon",
-    description: "Figuras inspiradas no universo Pokémon, feitas em impressão 3D de alta qualidade. Perfeitas para colecionar ou presentear. Cada peça é produzida com cuidado nos detalhes.",
+    name: "Figures — Pokémon",
+    description: "Personagens do universo Pokémon, feitas em impressão 3D de alta qualidade. Perfeitas para colecionar ou presentear. Cada peça é produzida com cuidado nos detalhes.",
     price: 0,
     category: "Geek & Anime",
     image: "assets/products/pokemon-figure.jpg",
@@ -47,8 +47,8 @@ const STORE_PRODUCTS = [
   },
   {
     id: 3,
-    name: "Figuras — Animes",
-    description: "Figuras art inspiradas em seus animes favoritos! Peças decorativas e colecionáveis com muito detalhe e qualidade de impressão.",
+    name: "Figure Art — Animes",
+    description: "Figure art inspiradas em seus animes favoritos! Peças decorativas e colecionáveis com muito detalhe e qualidade de impressão.",
     price: 0,
     category: "Geek & Anime",
     image: "assets/products/anime-figure.jpg",
@@ -60,7 +60,7 @@ const STORE_PRODUCTS = [
   {
     id: 4,
     name: "Super-Heróis — DC e Marvel",
-    description: "Figuras inspiradas nos heróis que você ama! Peças exclusivas feitas em impressão 3D. Confecção sob encomenda com atenção aos detalhes.",
+    description: "Figure Art inspiradas nos heróis que você ama! Peças exclusivas feitas em impressão 3D. Confecção sob encomenda com atenção aos detalhes.",
     price: 0,
     category: "Geek & Anime",
     image: "assets/products/super-herois.jpg",
